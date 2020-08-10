@@ -18,7 +18,12 @@ def pred_or_adj(string):
         return 'Невозможно распознать данную строку'
 
 
-test_string = 'Я хорош'
-file = open('result.txt', 'w')
-file.write(pred_or_adj(test_string))
+file = open('/result/result.txt', 'w')
+strings = [
+    'Я хорош',
+    'Мне нужно',
+    'Он должен',
+]
+for test_string in strings:
+    file.write(pred_or_adj(test_string) + '\n')
 file.close()
